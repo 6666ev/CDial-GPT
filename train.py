@@ -50,7 +50,7 @@ def train():
     parser.add_argument("--model_checkpoint", type=str, default="./CDial-GPT_LCCC-base", help="Path or URL of the model")
     parser.add_argument("--from_step", type=int, default=-1, help="Init learning rate from this step")
     parser.add_argument('--pretrained', action='store_true',default=True, help="If False train from scratch")
-    parser.add_argument("--data_path", type=str, default="data/legal/legal_data.json",
+    parser.add_argument("--data_path", type=str, default="data/toy/toy_data.json",
                         help="Path or url of the dataset. ")
     parser.add_argument("--train_path", type=str, default="data/toy_train.txt",
                         help="Path of the train dataset for dist dataset. ")

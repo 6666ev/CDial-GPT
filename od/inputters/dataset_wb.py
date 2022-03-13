@@ -46,7 +46,7 @@ class WBDataset(Dataset):
                                               for _ in s]
         instance["lm_labels"] = [-1] * len(instance["input_ids"])
         if self.lm_labels:
-            instance["lm_labels"] = ([-1] * sum(len(s) for s in sequence[:-1])) + [-1] + sequence[-1][1:]
+            instance["lm_labels"] = ([-1] * sum(len(s) for s in sequence[:-1])) + [-1] + sequence[-1][1:] # 这里shift了
 
         return instance
 
